@@ -1,10 +1,11 @@
 
-# string = input("Introduce a string of characters: ")
-string = 'azcwobobegghakl'  # example
+# string = 'azcwobobegghakl'  # example
 # string = "abcbcd"
 
 # ("z">"a") ->  True
 # print(string.find("a")) -> 0
+
+string = input("Introduce a string of characters: ")
 
 result = ''
 temp = ''
@@ -24,12 +25,12 @@ for c in string:
     else:
         temp = c
 
-    print(temp, iterator - 1, end=" - ")
+    # print(temp, iterator - 1, end=" - ")
 
     if len(temp) > len(result):
         result = temp
 
-    print(result)
+    # print(result)
 
 
 print("The longest alphabetically ordered string is: ", result)
