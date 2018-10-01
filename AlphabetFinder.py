@@ -9,21 +9,19 @@ string = input("Introduce a string of characters: ")
 
 result = ''
 temp = ''
-iterator = 0
 
-for c in string:
+for pos in range(len(string)):
 
-    prevPos = iterator - 1
-    iterator += 1
+    prevPos = pos - 1
 
     if temp is "":
-        temp = c
+        temp = string[pos]
         continue
 
-    if c >= string[prevPos]:
-        temp += c
+    if string[pos] >= string[prevPos]:
+        temp += string[pos]
     else:
-        temp = c
+        temp = string[pos]
 
     # print(temp, iterator - 1, end=" - ")
 
@@ -31,6 +29,5 @@ for c in string:
         result = temp
 
     # print(result)
-
 
 print("The longest alphabetically ordered string is: ", result)
